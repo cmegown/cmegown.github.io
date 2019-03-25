@@ -1,5 +1,6 @@
 name: Corey Megown
 
+url: https://cmegown.com
 permalink: /:title/
 
 exclude:
@@ -8,5 +9,6 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - gulpfile.js
+  - LICENSE.md
   - package-lock.json
   - package.json
