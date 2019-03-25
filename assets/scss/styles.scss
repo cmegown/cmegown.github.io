@@ -5,9 +5,39 @@
 }
 
 body {
+  margin: 0;
   line-height: 1.5;
 }
 
 img {
   max-width: 100%;
+}
+
+///
+
+.site {
+  //
+
+  @supports (display: grid) {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    min-height: 100vh;
+  }
+
+  &__header {
+    padding: 1em;
+  }
+
+  &__content {
+    width: 100%;
+    max-width: 50em;
+    margin: 0 auto;
+    padding: 1em;
+  }
+
+  &__footer {
+    margin-top: 4em;
+    padding: 1em;
+    text-align: center;
+  }
 }
