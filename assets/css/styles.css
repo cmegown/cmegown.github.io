@@ -1,1 +1,0 @@
-*,*:before,*:after{box-sizing:border-box}body{margin:0;line-height:1.5}img{max-width:100%}@supports (display: grid){.site{display:grid;grid-template-rows:auto 1fr;min-height:100vh}}.site__header{padding:1em}.site__content{width:100%;max-width:50em;margin:0 auto;padding:1em}.site__footer{margin-top:4em;padding:1em;text-align:center}
