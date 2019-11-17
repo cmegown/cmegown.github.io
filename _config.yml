@@ -1,7 +1,0 @@
-name: Corey Megown
-
-url: https://cmegown.com
-permalink: /:title/
-
-exclude:
-  - node_modules
