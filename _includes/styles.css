@@ -1,0 +1,72 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  line-height: 1.5;
+  font-family: Georgia, serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  line-height: 1.25;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+.container {
+  max-width: 48em;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 4em;
+  height: 4em;
+}
+
+@supports (display: grid) {
+  .site {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    min-height: 100vh;
+  }
+}
+
+.site__header {
+  padding: 4em 1em;
+  background-color: #f2f2f2;
+}
+
+.site__content {
+  padding: 4em 1em;
+}
+
+.site__footer {
+  padding: 1em;
+  text-align: center;
+}
