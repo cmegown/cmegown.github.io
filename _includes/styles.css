@@ -7,7 +7,7 @@
 body {
   margin: 0;
   line-height: 1.5;
-  font-family: Georgia, serif;
+  font-family: 'PT Serif', serif;
 }
 
 img {
@@ -24,7 +24,6 @@ h6 {
   margin-top: 0;
   margin-bottom: 1rem;
   line-height: 1.25;
-  font-family: Arial, sans-serif;
 }
 
 h1 {
@@ -40,13 +39,10 @@ h3 {
 }
 
 .container {
+  width: 100%;
   max-width: 48em;
-  margin: 0 auto;
-}
-
-.logo {
-  width: 4em;
-  height: 4em;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 @supports (display: grid) {
@@ -58,15 +54,29 @@ h3 {
 }
 
 .site__header {
-  padding: 4em 1em;
+  padding: 1em;
   background-color: #f2f2f2;
 }
 
 .site__content {
-  padding: 4em 1em;
+  padding: 1em;
 }
 
 .site__footer {
   padding: 1em;
   text-align: center;
+}
+
+@media screen and (min-width: 48em) {
+  .site__header,
+  .site__content {
+    padding: 2em 1em;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .site__header,
+  .site__content {
+    padding: 4em 1em;
+  }
 }
