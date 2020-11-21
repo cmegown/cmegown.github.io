@@ -1,4 +1,5 @@
 name: Corey Megown
-
 url: https://cmegown.com
-permalink: /:title/
+permalink: /blog/:title/
+
+excerpt_separator: <!-- more -->

@@ -1,0 +1,41 @@
+.site {
+  border-top: 0.5em solid var(--primary);
+
+  @supports (display: grid) {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    min-height: 100vh;
+  }
+
+  &__header {
+    padding: 1em;
+    background-color: #f2f2f2;
+  }
+
+  &__content {
+    padding: 1em;
+  }
+
+  &__footer {
+    padding: 1em;
+    border-bottom: 0.5em solid var(--primary);
+    background-color: var(--gray-light);
+    text-align: center;
+  }
+
+  ///
+
+  @include mq(48em) {
+    &__header,
+    &__content {
+      padding: 2em 1em;
+    }
+  }
+
+  @include mq(64em) {
+    &__header,
+    &__content {
+      padding: 4em 1em;
+    }
+  }
+}

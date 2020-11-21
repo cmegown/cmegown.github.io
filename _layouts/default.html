@@ -8,26 +8,21 @@
     <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.name }}</title>
 
     <link rel="canonical" href="{{ page.url | prepend: site.url }}">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif&display=swap">
-    <style>
-      {% include styles.css %}
-    </style>
+    <link rel="stylesheet" href="/assets/styles/dist/styles.css">
   </head>
   <body class="site">
     <header class="site__header">
       <div class="container">
         <a href="/">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" style="vertical-align: middle; /* temp */">
-            <rect width="100%" height="100%" rx="4" ry="4" />
-            <polygon fill="white" points="16,18 40,34.5 40,32.5 33.5,28 48,18 48,40.5 40,46 24,35 24,37 30.5,41.5 24,46 16,40.5" />
+          <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+            <rect class="logo__bg" width="100%" height="100%" rx="4" ry="4" />
+            <polygon class="logo__fg" fill="white" points="16,18 40,34.5 40,32.5 33.5,28 48,18 48,40.5 40,46 24,35 24,37 30.5,41.5 24,46 16,40.5" />
           </svg>
         </a>
       </div>
     </header>
     <main class="site__content">
-      <div class="container">
-        {{ content }}
-      </div>
+      {{ content }}
     </main>
     <footer class="site__footer">
       <small>Copyright &copy; {{ site.time | date: '%Y' }} {{ site.name }}. All Rights Reserved.</small>
