@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.name }}</title>
+  </head>
+  <body>
+    <header>
+      <a href="/">Home</a>
+    </header>
+    <main>
+      {{ content }}
+    </main>
+    <footer>
+      <small>Copyright &copy; {{ site.time | date: '%Y' }} {{ site.name }}. All Rights Reserved.</small>
+    </footer>
+  </body>
+</html>
