@@ -149,10 +149,6 @@ a {
 
 .post__content {}
 
-.post__content p {
-  text-indent: 2em;
-}
-
 .post__content p ~ h2 {
   margin-top: 4rem;
 }

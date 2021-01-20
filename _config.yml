@@ -1,3 +1,11 @@
 name: Corey Megown
 url: https://cmegown.com
 permalink: /blog/:title/
+
+defaults:
+  -
+    scope:
+      path: ''
+      type: 'posts'
+    values:
+      layout: 'post'

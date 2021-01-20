@@ -1,0 +1,7 @@
+{
+  "name": "cmegown.github.io",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "bundle update && bundle exec jekyll serve"
+  }
+}
