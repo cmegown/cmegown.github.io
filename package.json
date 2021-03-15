@@ -2,6 +2,10 @@
   "name": "cmegown.github.io",
   "version": "1.0.0",
   "scripts": {
-    "start": "bundle update && bundle exec jekyll serve"
+    "start": "npx eleventy --serve",
+    "build": "npx eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.1"
   }
 }

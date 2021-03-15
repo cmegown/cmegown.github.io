@@ -5,17 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.name }}</title>
+    <title>{% if title %}{{ title }} | {% endif %}{{ site.name }}</title>
 
     <link rel="canonical" href="{{ page.url | prepend: site.url }}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap">
-    <style>{% include styles.css %}</style>
+    <link rel="stylesheet" href="{{ '/styles.css' | url }}">
   </head>
   <body class="site">
     <header class="site__header">
       <div class="container">
-        <a href="/" aria-label="{{ site.name }}">
+        <a href="{{ '/' | url }}" aria-label="{{ site.name }}">
           <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" style="vertical-align: middle;">
             <rect fill="#2e353d" width="100%" height="100%" rx="4" ry="4" />
             <polygon fill="white" points="16,18 40,34.5 40,32.5 33.5,28 48,18 48,40.5 40,46 24,35 24,37 30.5,41.5 24,46 16,40.5" />
@@ -24,11 +24,11 @@
       </div>
     </header>
     <main class="site__content">
-      {{ content }}
+      {{ content | safe }}
     </main>
     <footer class="site__footer">
       <div class="container">
-        <small>Copyright &copy; {{ site.time | date: '%Y' }} {{ site.name }}. All Rights Reserved.</small>
+        <small>Copyright &copy; {{ site.year }} {{ site.name }}. All Rights Reserved.</small>
       </div>
     </footer>
   </body>

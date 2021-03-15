@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: base
 title: Home
 ---
 
@@ -7,9 +7,9 @@ title: Home
   <div class="container">
     <h1>Recent posts</h1>
     <ul>
-      {% for post in site.posts %}
+      {% for post in collections.posts reversed %}
         <li>
-          <a href="{{ post.url }}">{{ post.title }}</a>
+          <a href="{{ post.url | url }}">{{ post.data.title }}</a>
         </li>
       {% endfor %}
     </ul>
