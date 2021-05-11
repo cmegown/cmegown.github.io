@@ -1,17 +1,15 @@
 ---
-layout: base
+layout: page
 title: Home
 ---
 
-<div class="page">
-  <div class="container">
-    <h1>Recent posts</h1>
-    <ul>
-      {% for post in collections.posts reversed %}
-        <li>
-          <a href="{{ post.url | url }}">{{ post.data.title }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
-</div>
+<p>This site is being updated in the open, and is likely a bit rough around the edges. The poor thing had been left untouched for nearly a decade and was desperately in need of a top-to-bottom overhaul. Stick around!</p>
+
+<h2>Recent posts</h2>
+<ul>
+  {% for post in collections.posts reversed %}
+    <li>
+      <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
