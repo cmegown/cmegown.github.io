@@ -50,9 +50,10 @@ h6 {
 }
 
 a {
-  text-decoration: none;
-  border-bottom: 0.125em solid var(--accent-color);
-  color: var(--text-color);
+  text-decoration-color: var(--accent-color);
+  text-decoration-thickness: 0.125em;
+  text-underline-offset: 0.125em;
+  color: currentColor;
 }
 
 /**/
@@ -87,6 +88,16 @@ a {
   background-color: var(--background-color-alt);
 }
 
+.site__header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site__header a:not([aria-current]) {
+  text-decoration: none;
+}
+
 .site__content {}
 
 .site__footer {
@@ -109,35 +120,62 @@ a {
 
 /**/
 
-.page {
-  padding: 2em 0;
+.skip-link {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
 }
 
-@media screen and (min-width: 48em) {
-  .page {
-    padding: 4em 0;
-  }
+.skip-link:focus {
+  transform: translateX(0);
+}
+
+.nav {
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav a {
+  display: inline-block;
+  padding: 0.75em 1em;
+}
+
+.social-links {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+  margin: 0 0 1em;
+  padding: 0;
+  list-style: none;
 }
 
 /**/
 
-.post {}
+.page {}
 
-.post__header {
+.page__header {
+  margin-bottom: 2em;
   padding: 2em 0;
+  background-color: var(--background-color-alt);
 }
 
-.post__title {
+.page__title {
   font-size: 4em;
   font-size: clamp(2em, 6vw, 4em);
 }
 
-.post__date {
+.page__date {
   position: relative;
   margin-top: 2em;
+  margin-bottom: 0;
 }
 
-.post__date:before {
+.page__date:before {
   content: '';
   position: absolute;
   bottom: calc(100% + 0.875em);
@@ -147,26 +185,31 @@ a {
   background-color: var(--accent-color);
 }
 
-.post__content {}
+.page__content {}
 
-.post__content p ~ h2 {
-  margin-top: 4rem;
+.page__content p ~ h2 {
+  margin-top: 2rem;
 }
 
 @media screen and (min-width: 32em) {
-  .post__header {
+  .page__header {
+    margin-bottom: 4em;
     padding: 4em;
     text-align: center;
   }
 
-  .post__date {
+  .page__date {
     margin-top: 4em;
   }
 
-  .post__date:before {
+  .page__date:before {
     bottom: calc(100% + 1.875em);
     left: 50%;
     transform: translateX(-50%);
+  }
+
+  .page__content p ~ h2 {
+    margin-top: 4rem;
   }
 }
 
