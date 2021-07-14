@@ -218,6 +218,7 @@ a {
 .logo {
   width: 3em;
   height: 3em;
+  vertical-align: middle;
 }
 
 @media screen and (min-width: 48em) {
