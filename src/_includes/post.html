@@ -6,7 +6,7 @@ layout: base
   <header class="page__header">
     <div class="container container--large">
       <h1 class="page__title">{{ title }}</h1>
-      <p class="page__date"><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%B %e, %Y' }}</time></p>
+      <p class="page__date"><time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></p>
     </div>
   </header>
   <div class="page__content">

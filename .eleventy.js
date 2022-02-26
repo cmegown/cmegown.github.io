@@ -1,18 +1,19 @@
-const slugify = require("slugify");
+const { DateTime } = require('luxon');
 
-module.exports = config => {
+module.exports = (config) => {
   config.addPassthroughCopy('./src/styles.css');
 
-  // https://github.com/11ty/eleventy/issues/278
-  config.addFilter("slugify", str => {
-    return slugify(str, {
-      lower: true,
-      replacement: "-",
-      remove: /[*+~.·,()'"`´%!?¿:@]/g
-    });
+  config.addFilter('readableDate', (dateObj) => {
+    return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat('LLLL dd, yyyy');
+  });
+
+  config.addFilter('htmlDateString', (dateObj) => {
+    return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat('yyyy-LL-dd');
   });
 
   return {
+    htmlTemplateEngine: 'njk',
+    markdownTemplateEngine: 'njk',
     dir: {
       input: 'src',
       output: 'dist'
