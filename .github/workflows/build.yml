@@ -5,6 +5,10 @@ on: [push]
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14.x]
+        
     steps:
       - name: Checkout
         uses: actions/checkout@master
