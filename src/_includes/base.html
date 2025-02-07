@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+  <html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% if title %}{{ title }} | {% endif %}{{ site.name }}</title>
+    <meta name="description" content="{{ site.description }}">
+
+    <link rel="stylesheet" href="/assets/css/styles.css">
+  </head>
+  <body>
+    <header>
+      <a href="#content">Skip to content</a>
+      <a href="/">Home</a>
+    </header>
+    <main id="content" tabindex="-1">
+      {{ content | safe }}
+    </main>
+    <footer>
+      <small>Copyright &copy; 2011&ndash;2025 {{ site.name }}. All Rights Reserved.</small>
+    </footer>
+
+    <script type="module" src="/assets/js/scripts.js"></script>
+  </body>
+</html>
