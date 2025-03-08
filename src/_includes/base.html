@@ -3,22 +3,31 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="none">
 
     <title>{% if title %}{{ title }} | {% endif %}{{ site.name }}</title>
     <meta name="description" content="{{ site.description }}">
 
     <link rel="stylesheet" href="/assets/css/styles.css">
   </head>
-  <body>
-    <header>
-      <a href="#content">Skip to content</a>
-      <a href="/">Home</a>
+  <body class="site">
+    <header class="site-header">
+      <a class="skip-link btn" href="#content">Skip to content</a>
+      <div class="container">
+        <a href="/" aria-label="{{ site.name }}">
+          <svg class="site-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 56" width="3em" height="2.625em" fill="currentColor">
+            <polygon points="0,0 48,33 48,29 35,20 64,0 64,45 48,56 16,34 16,38 29,47 16,56 0,45"></polygon>
+          </svg>
+        </a>
+      </div>
     </header>
-    <main id="content" tabindex="-1">
+    <main id="content" class="site-content" tabindex="-1">
       {{ content | safe }}
     </main>
-    <footer>
-      <small>Copyright &copy; 2011&ndash;2025 {{ site.name }}. All Rights Reserved.</small>
+    <footer class="site-footer">
+      <div class="container">
+        <small>Copyright &copy; 2011&ndash;{{ build.year }} {{ site.name }}. All Rights Reserved.</small>
+      </div>
     </footer>
 
     <script type="module" src="/assets/js/scripts.js"></script>

@@ -2,10 +2,17 @@
 layout: base
 ---
 
-<article>
-  <header>
+<article class="container container--sm">
+  <header class="post-header">
     <h1>{{ title }}</h1>
-    <time datetime="">{{ page.date }}</time>
+    <p>
+      Published on
+      <time datetime="{{ page.date | machineReadable }}">
+        {{ page.date | humanReadable }}
+      </time>
+    </p>
   </header>
-  {{ content | safe }}
+  <div class="prose">
+    {{ content | safe }}
+  </div>
 </article>

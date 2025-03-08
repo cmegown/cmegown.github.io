@@ -3,10 +3,13 @@ title: Home
 permalink: /
 ---
 
-<ul>
-  {% for post in collections.posts | reverse %}
-    <li>
-      <a href="{{ post.url | url }}">{{ post.data.title }}</a>
-    </li>
-  {% endfor %}
-</ul>
+<section class="container container--sm">
+  <h1 style="margin-block-end: 1.5rem;">Latest Posts</h1>
+  <ol reversed>
+    {% for post in collections.posts | reverse %}
+      <li>
+        <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+      </li>
+    {% endfor %}
+  </ol>
+</section>
